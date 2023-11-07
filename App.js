@@ -3,32 +3,34 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
 // import { StatusBar } from "expo-status-bar";
 // import { StyleSheet, Text, View } from "react-native";
-// import { useFonts } from "expo-font";
-// import * as SplashScreen from "expo-splash-screen";
-// import { useCallback } from "react";
+import { useFonts } from "expo-font";
+import * as SplashScreen from "expo-splash-screen";
+import { useCallback } from "react";
 
 const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  // const [fontsLoaded] = useFonts({
-  //   // regular: require("./assets/fonts/Montserrat-Regular.ttf"),
-  //   // light: require("./assets,/fonts/Montserrat-Light.ttf"),
-  //   // medium: require("./assets/fonts/Montserrat-Medium.ttf"),
-  //   // bold: require("./assets/fonts/Montserrat-Bold.ttf"),
-  //   // xBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
-  //   // semiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
-  // });
+  const [fontsLoaded] = useFonts({
+    iconicon: require("@expo/vector-icons"),
 
-  // const onLayoutRootView = useCallback(async () => {
-  //   if (fontsLoaded) {
-  //     await SplashScreen.hideAsync();
-  //   }
-  // }, [fontsLoaded]);
+    // regular: require("./assets/fonts/Montserrat-Regular.ttf"),
+    // light: require("./assets,/fonts/Montserrat-Light.ttf"),
+    // medium: require("./assets/fonts/Montserrat-Medium.ttf"),
+    // bold: require("./assets/fonts/Montserrat-Bold.ttf"),
+    // xBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
+    // semiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
+  });
 
-  // if (!fontsLoaded) {
-  //   return null;
-  // }
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     // <View style={styles.container} onLayout={onLayoutRootView}>
@@ -39,7 +41,7 @@ export default function App() {
     //   <StatusBar style="auto" />
     // </View>
 
-    <NavigationContainer>
+    <NavigationContainer onLayoutRootView={onLayoutRootView}>
       <Stack.Navigator>
         <Stack.Screen
           name="Bottom Navigation"
