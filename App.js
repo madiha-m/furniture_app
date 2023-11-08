@@ -1,11 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
-// import { StatusBar } from "expo-status-bar";
-// import { StyleSheet, Text, View } from "react-native";
-// import { useFonts } from "expo-font";
+import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
+import { Cart } from "./screens";
 // import { StatusBar, Text, View } from "react-native";
 // import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
@@ -13,15 +12,15 @@ const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  // const [fontsLoaded] = useFonts({
-  //   // iconicon: require("@expo/vector-icons"),
-  //   // regular: require("./assets/fonts/Montserrat-Regular.ttf"),
-  //   // light: require("./assets,/fonts/Montserrat-Light.ttf"),
-  //   // medium: require("./assets/fonts/Montserrat-Medium.ttf"),
-  //   // bold: require("./assets/fonts/Montserrat-Bold.ttf"),
-  //   // xBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
-  //   // semiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
-  // });
+  const [fontsLoaded] = useFonts({
+    // iconicon: require("@expo/vector-icons"),
+    regular: require("./assets/fonts/Montserrat-Regular.ttf"),
+    light: require("./assets/fonts/Montserrat-Light.ttf"),
+    medium: require("./assets/fonts/Montserrat-Medium.ttf"),
+    bold: require("./assets/fonts/Montserrat-Bold.ttf"),
+    xBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
+    semiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
+  });
 
   // const onLayoutRootView = useCallback(async () => {
   //   if (fontsLoaded) {
@@ -34,16 +33,6 @@ export default function App() {
   // }
 
   return (
-    // <View onLayout={onLayoutRootView}>
-    //   <Text>Oto start working on your app!</Text>
-    //   <Ionicons size={50} name="person"/>
-    //   <Ionicons size={50} name="home-outline"/>
-    //   <Ionicons size={50} name="home-outline"/>
-      
-    //   <Text>Oto start working on your app!</Text>
-    //   <StatusBar style="auto" />
-    // </View>
-
     <NavigationContainer /* onLayoutRootView={onLayoutRootView} */>
       <Stack.Navigator>
         <Stack.Screen
@@ -51,25 +40,12 @@ export default function App() {
           component={BottomTabNavigation}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "#fff",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   regularTextStyle: {
-//     // fontFamily: "regular", custom fonts not working
-//     fontWeight: "regular",
-//     fontSize: 20,
-//   },
-//   xBoldTextStyle: {
-//     fontWeight: "condensedBold",
-//     fontSize: 20,
-//   },
-// });
