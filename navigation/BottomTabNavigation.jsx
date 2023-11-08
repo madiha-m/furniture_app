@@ -15,6 +15,7 @@ const screenOptions = {
     bottom: 0,
     right: 0,
     left: 0,
+    elevation: 0,
     height: 55,
   },
 };
@@ -30,7 +31,7 @@ const BottomTabNavigation = () => {
             return (
               <Ionicons
                 name={focused ? "grid" : "grid-outline"}
-                color={focused ? COLORS.red : COLORS.gray}
+                color={focused ? COLORS.primary : COLORS.grayLavender}
                 size={26}
               />
             );
@@ -60,7 +61,7 @@ const BottomTabNavigation = () => {
             return (
               <Ionicons
                 name={focused ? "person" : "person-outline"}
-                color={focused ? COLORS.red : COLORS.gray}
+                color={focused ? COLORS.primary : COLORS.grayLavender}
                 size={26}
               />
             );

@@ -3,50 +3,53 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
 // import { StatusBar } from "expo-status-bar";
 // import { StyleSheet, Text, View } from "react-native";
-import { useFonts } from "expo-font";
+// import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
+// import { StatusBar, Text, View } from "react-native";
+// import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
 const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
 
 export default function App() {
-  const [fontsLoaded] = useFonts({
-    iconicon: require("@expo/vector-icons"),
+  // const [fontsLoaded] = useFonts({
+  //   // iconicon: require("@expo/vector-icons"),
+  //   // regular: require("./assets/fonts/Montserrat-Regular.ttf"),
+  //   // light: require("./assets,/fonts/Montserrat-Light.ttf"),
+  //   // medium: require("./assets/fonts/Montserrat-Medium.ttf"),
+  //   // bold: require("./assets/fonts/Montserrat-Bold.ttf"),
+  //   // xBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
+  //   // semiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
+  // });
 
-    // regular: require("./assets/fonts/Montserrat-Regular.ttf"),
-    // light: require("./assets,/fonts/Montserrat-Light.ttf"),
-    // medium: require("./assets/fonts/Montserrat-Medium.ttf"),
-    // bold: require("./assets/fonts/Montserrat-Bold.ttf"),
-    // xBold: require("./assets/fonts/Montserrat-ExtraBold.ttf"),
-    // semiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
-  });
+  // const onLayoutRootView = useCallback(async () => {
+  //   if (fontsLoaded) {
+  //     await SplashScreen.hideAsync();
+  //   }
+  // }, [fontsLoaded]);
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      await SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded]);
-
-  if (!fontsLoaded) {
-    return null;
-  }
+  // if (!fontsLoaded) {
+  //   return null;
+  // }
 
   return (
-    // <View style={styles.container} onLayout={onLayoutRootView}>
-    //   <Text style={styles.regularTextStyle}>
-    //     Oto start working on your app!
-    //   </Text>
-    //   <Text style={styles.xBoldTextStyle}>Oto start working on your app!</Text>
+    // <View onLayout={onLayoutRootView}>
+    //   <Text>Oto start working on your app!</Text>
+    //   <Ionicons size={50} name="person"/>
+    //   <Ionicons size={50} name="home-outline"/>
+    //   <Ionicons size={50} name="home-outline"/>
+      
+    //   <Text>Oto start working on your app!</Text>
     //   <StatusBar style="auto" />
     // </View>
 
-    <NavigationContainer onLayoutRootView={onLayoutRootView}>
+    <NavigationContainer /* onLayoutRootView={onLayoutRootView} */>
       <Stack.Navigator>
         <Stack.Screen
           name="Bottom Navigation"
           component={BottomTabNavigation}
-          options={{ headerShown: true }}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>
