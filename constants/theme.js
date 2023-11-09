@@ -20,8 +20,11 @@ const COLORS = {
 const SIZES = {
   xSmall: 10,
   small: 12,
+  semiSmall: 14,
   medium: 16,
+  semiMedium: 18,
   large: 20,
+  semiLarge: 22,
   xLarge: 24,
   xxLarge: 44,
   height,

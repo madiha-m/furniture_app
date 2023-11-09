@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    // iconicon: require("@expo/vector-icons"),
+    iconicon: require("@expo/vector-icons"),
     regular: require("./assets/fonts/Montserrat-Regular.ttf"),
     light: require("./assets/fonts/Montserrat-Light.ttf"),
     medium: require("./assets/fonts/Montserrat-Medium.ttf"),
@@ -22,15 +22,17 @@ export default function App() {
     semiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
   });
 
-  // const onLayoutRootView = useCallback(async () => {
-  //   if (fontsLoaded) {
-  //     await SplashScreen.hideAsync();
-  //   }
-  // }, [fontsLoaded]);
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+      console.log(fontsLoaded + " test 1");
+    }
+  }, [/* fontsLoaded */]);
 
-  // if (!fontsLoaded) {
-  //   return null;
-  // }
+  if (!fontsLoaded) {
+    console.log(fontsLoaded + " test not 2");
+    // return null;
+  }
 
   return (
     <NavigationContainer /* onLayoutRootView={onLayoutRootView} */>

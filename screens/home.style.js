@@ -6,5 +6,21 @@ const styles = StyleSheet.create({
     fontFamily: "bold",
     fontSize: 40,
   },
+  appBarWrapper: {
+    marginHorizontal: SIZES.semiLarge,
+    marginTop: SIZES.small,
+  },
+  appBar: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  appBar2: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  appBar3: {
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
 });
 export default styles;
