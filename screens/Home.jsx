@@ -1,23 +1,26 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context"; // for content should be on screen
+import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./home.style";
+import { Ionicons } from "@expo/vector-icons";
 
 const Home = () => {
   return (
     <SafeAreaView>
+      {/* content should be on screen, not out of range */}
       <View style={styles.appBarWrapper}>
+        {/* Set position of content on XY-sxis */}
         <View style={styles.appBar}>
-          <Text /* style={styles.textStyle} */>Home</Text>
-          <Text /* style={styles.textStyle} */>Next</Text>
-        </View>
-        <View style={styles.appBar2}>
-          <Text /* style={styles.textStyle} */>Home</Text>
-          <Text /* style={styles.textStyle} */>Next</Text>
-        </View>
-        <View style={styles.appBar3}>
-          <Text /* style={styles.textStyle} */>Home</Text>
-          <Text /* style={styles.textStyle} */>Next</Text>
+          {/* Set AppBar contents (Text, icons etc formating e.g. alignment, direction) */}
+          <Ionicons name="location-outline" size={24} />
+          <Text style={styles.location}>Home</Text>
+
+          {/* Cart icon + number on cart */}
+          <View style={{ alignItems: "flex-end" }}>
+            <View style={styles.cartCount}>
+              <Text style={styles.cartNumber}>3</Text>
+            </View>
+          </View>
         </View>
       </View>
     </SafeAreaView>
