@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./home.style";
-import { Ionicons } from "@expo/vector-icons";
+import { Fontisto, Ionicons } from "@expo/vector-icons";
+import Welcome from "../components/home/Welcome";
 
 const Home = () => {
   return (
@@ -20,9 +21,16 @@ const Home = () => {
             <View style={styles.cartCount}>
               <Text style={styles.cartNumber}>3</Text>
             </View>
+            {/* added shopping bag icon, but its not clickable use touchable opacity for it */}
+            <TouchableOpacity>
+              <Fontisto name="shopping-bag" size={24} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
+      <ScrollView>
+        <Welcome />
+      </ScrollView>
     </SafeAreaView>
   );
 };

@@ -11,7 +11,7 @@ import { Cart } from "./screens";
 const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
 
-export default function App() {
+export default function App() { 
   const [fontsLoaded] = useFonts({
     iconicon: require("@expo/vector-icons"),
     regular: require("./assets/fonts/Montserrat-Regular.ttf"),
