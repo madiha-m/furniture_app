@@ -9,9 +9,43 @@ const styles = StyleSheet.create({
     fontFamily: "bold",
     fontSize: SIZES.xxLarge - 6,
     marginTop: top,
-    marginHorizontal: 12,
+    marginHorizontal: SIZES.small,
     color: color,
   }),
+  searchContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignContent: "center",
+    backgroundColor: COLORS.secondary,
+    borderRadius: SIZES.medium,
+    marginVertical: SIZES.medium,
+    height: 50,
+  },
+  searchIcon: {
+    marginHorizontal: SIZES.xSmall,
+    marginTop: SIZES.small,
+    color: COLORS.grayRhythm,
+  },
+  searchWrapper: {
+    flex: 1,
+    backgroundColor: COLORS.secondary,
+    marginRight: SIZES.small,
+    borderRadius: SIZES.small,
+  },
+  searchInput: {
+    fontFamily: "regular",
+    width: "100%",
+    height: "100%",
+    paddingHorizontal: SIZES.small,
+  },
+  searchBtn: {
+    width: 50,
+    height: "100%",
+    borderRadius: SIZES.medium,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: COLORS.primary,
+  },
 });
 
 export default styles;
