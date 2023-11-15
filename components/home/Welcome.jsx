@@ -38,7 +38,7 @@ const Welcome = () => {
             <Ionicons
               name="camera-outline"
               size={SIZES.xLarge}
-              color={COLORS.white}
+              color={COLORS.offwhite}
             />
           </TouchableOpacity>
         </View>
