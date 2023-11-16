@@ -36,3 +36,4 @@ yarn-error.*
 
 # vscode files
 .vscode/
+.vscode/settings.json
