@@ -1,5 +1,6 @@
 import Carousel from "./home/Carousel";
-import Headers from "./home/Headers";
+import Headings from "./home/Headings";
 import Welcome from "./home/Welcome";
 
-export default { Welcome, Carousel, Headers };
+
+export default { Welcome, Carousel, Headings };
