@@ -4,7 +4,7 @@ import BottomTabNavigation from "./navigation/BottomTabNavigation";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
-import { Cart } from "./screens";
+import { Cart, ProductDetails } from "./screens";
 // import { StatusBar, Text, View } from "react-native";
 // import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 
@@ -45,6 +45,11 @@ export default function App() {
         <Stack.Screen
           name="Cart"
           component={Cart}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ProductDetails"
+          component={ProductDetails}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
