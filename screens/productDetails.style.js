@@ -132,13 +132,37 @@ const styles = StyleSheet.create({
 
   // Cart Row
   cartRow: {
-    backgroundColor: COLORS.black,
-    marginHorizontal: SIZES.semiLarge,
-    paddingBottom: SIZES.small,
+    // backgroundColor: COLORS.gold,
+    // paddingBottom: SIZES.small,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: SIZES.width - 44,
+    // width: SIZES.width-38,
+    marginHorizontal: SIZES.semiSmall,
+    marginVertical: SIZES.large - 4,
+  },
+  cartBtn: {
+    backgroundColor: COLORS.black,
+    width: SIZES.width * 0.6,
+    paddingHorizontal: SIZES.small,
+    paddingVertical: SIZES.small - 5,
+    borderRadius: SIZES.large,
+    // marginLeft: SIZES.small,
+    height: SIZES.xxLarge - 4,
+  },
+  cartBtnText: {
+    color: COLORS.lightWhite,
+    fontFamily: "semiBold",
+    fontSize: SIZES.medium,
+  },
+  cartIconBtn: {
+    backgroundColor: COLORS.black,
+    width: SIZES.xxLarge - 4,
+    height: SIZES.xxLarge - 4,
+    borderRadius: 50,
+    // margin: SIZES.small,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 export default styles;

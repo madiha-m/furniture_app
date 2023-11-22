@@ -1,6 +1,7 @@
 import { View, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import {
+  Fontisto,
   Ionicons,
   MaterialCommunityIcons,
   SimpleLineIcons,
@@ -127,7 +128,12 @@ const ProductDetails = ({ navigation }) => {
 
         {/* Cart Row */}
         <View style={styles.cartRow}>
-
+          <TouchableOpacity style={styles.cartBtn}>
+            <Text style={styles.cartBtnText}>BUY NOW</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.cartIconBtn}>
+            <Fontisto name="shopping-bag" size={24} color={COLORS.lightWhite} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
