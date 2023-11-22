@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   upperRow: {
-    marginHorizontal: 20,
+    marginHorizontal: SIZES.large,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
     resizeMode: "cover",
   },
+
+  // Details Section: Includes all under
   details: {
     marginTop: -SIZES.large,
     backgroundColor: COLORS.lightWhite,
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     width: SIZES.width - 44,
-    top: 20,
+    top: SIZES.large,
   },
   title: {
     fontFamily: "bold",
@@ -46,7 +48,7 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
   },
   price: {
-    paddingHorizontal: 12,
+    paddingHorizontal: SIZES.small,
     fontFamily: "semiBold",
     fontSize: SIZES.large,
   },
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingBottom: SIZES.small,
     width: SIZES.width - 10,
-    top: 5,
+    top: SIZES.xSmall - 5,
   },
   rating: {
     top: SIZES.large,
@@ -68,9 +70,75 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginHorizontal: SIZES.large,
   },
+  ratingTextWrapper: (start) => ({
+    justifyContent: "space-around",
+    alignItems: "center",
+    // width: 30,
+    minWidth: SIZES.xLarge + 6,
+    marginStart: start,
+  }),
   ratingText: {
     color: COLORS.grayRhythm,
     fontFamily: "medium",
+  },
+
+  // Description
+  descWrapper: {
+    marginTop: SIZES.large * 2,
+    marginHorizontal: SIZES.large,
+  },
+  descHeading: {
+    fontFamily: "medium",
+    fontSize: SIZES.semiMedium,
+  },
+  descText: {
+    fontFamily: "regular",
+    fontSize: SIZES.small,
+    textAlign: "justify",
+    marginBottom: SIZES.small,
+  },
+
+  // Delivery Row
+  deliveryRow: {
+    marginBottom: SIZES.small,
+  },
+  locationWrapper: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: COLORS.secondary,
+    borderRadius: SIZES.large,
+    marginHorizontal: SIZES.semiSmall,
+    padding: SIZES.small / 2,
+  },
+  locationIcon: {},
+  locationTextWrapper: {
+    marginHorizontal: 6,
+  },
+  locationText: {
+    paddingTop: 2,
+    fontFamily: "regular",
+    fontSize: SIZES.small,
+  },
+
+  // Circle Style Row
+  circlRow: {
+    marginHorizontal: SIZES.xLarge - 4,
+  },
+  circle: {
+    flexDirection: "row",
+    marginEnd: SIZES.xxLarge,
+  },
+
+  // Cart Row
+  cartRow: {
+    backgroundColor: COLORS.black,
+    marginHorizontal: SIZES.semiLarge,
+    paddingBottom: SIZES.small,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: SIZES.width - 44,
   },
 });
 export default styles;
