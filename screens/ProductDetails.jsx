@@ -31,7 +31,7 @@ const ProductDetails = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons name="chevron-back-circle" size={30} />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => {}}>
           <Ionicons name="heart" size={30} color={COLORS.primary} />
         </TouchableOpacity>
       </View>
@@ -39,7 +39,7 @@ const ProductDetails = ({ navigation }) => {
       {/* Image */}
       <Image
         source={{
-          uri: "https://images.unsplash.com/photo-1630701052108-5601f06df085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTB8fGx1eHVyeSUyMGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
+          uri: "https://media.gettyimages.com/id/1394286634/photo/rooftop-lounge.jpg?s=2048x2048&w=gi&k=20&c=UgAU5hro9O0nRC7KwlFETR7BK11jrdwQ7Ke1eLeW_uU=",
         }}
         style={styles.image}
       />
@@ -47,7 +47,7 @@ const ProductDetails = ({ navigation }) => {
       <View style={styles.details}>
         {/* Title Row */}
         <View style={styles.titleRow}>
-          <Text style={styles.title}>bvbvnb</Text>
+          <Text style={styles.title}>Roof Terrace Interior</Text>
           <View style={styles.priceWrapper}>
             <Text style={styles.price}>$ 999.99</Text>
           </View>
@@ -128,10 +128,10 @@ const ProductDetails = ({ navigation }) => {
 
         {/* Cart Row */}
         <View style={styles.cartRow}>
-          <TouchableOpacity style={styles.cartBtn}>
+          <TouchableOpacity style={styles.cartBtn} onPress={() => {}}>
             <Text style={styles.cartBtnText}>BUY NOW</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.cartIconBtn}>
+          <TouchableOpacity style={styles.cartIconBtn} onPress={() => {}}>
             <Fontisto name="shopping-bag" size={24} color={COLORS.lightWhite} />
           </TouchableOpacity>
         </View>
