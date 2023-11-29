@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   },
   cartBtn: {
     backgroundColor: COLORS.black,
-    width: SIZES.width * 0.6,
+    width: SIZES.width * 0.73,
     paddingHorizontal: SIZES.small,
     paddingVertical: SIZES.small - 5,
     borderRadius: SIZES.large,
